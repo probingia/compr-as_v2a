@@ -1,0 +1,19 @@
+{
+  "name": "compr-as-con-mejoras-codigo",
+  "version": "1.0.0",
+  "description": "Una PWA (Progressive Web App) moderna y completa para gestionar tus listas de la compra de forma fácil, rápida y con funciones avanzadas.",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "test": "vitest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "devDependencies": {
+    "jsdom": "^26.1.0",
+    "vite": "^5.3.1",
+    "vitest": "^3.2.4"
+  }
+}

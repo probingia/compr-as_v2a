@@ -1,0 +1,21 @@
+{
+    "name": "Compr-As: Tu Lista de Compras Inteligente",
+    "short_name": "Compr-As",
+    "description": "Una aplicación web progresiva para gestionar tus listas de compras de forma fácil y offline.",
+    "start_url": "./index.html",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#0d6efd",
+    "icons": [
+        {
+            "src": "images/icon-192.png",
+            "type": "image/png",
+            "sizes": "192x192"
+        },
+        {
+            "src": "images/icon-512.png",
+            "type": "image/png",
+            "sizes": "512x512"
+        }
+    ]
+}
