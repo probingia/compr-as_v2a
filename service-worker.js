@@ -1,30 +1,30 @@
 
 const CACHE_NAME = 'compr-as-cache-v2.5'; // Versión actualizada
 const urlsToCache = [
-    '/',
-    '/index.html',
-    '/style.css',
-    '/app.js',
-    '/productos.json',
-    '/tiendas.json',
-    '/manifest.json',
-    '/images/icon-192.png',
-    '/images/icon-512.png',
+    './',
+    './index.html',
+    './style.css',
+    './app.js',
+    './productos.json',
+    './tiendas.json',
+    './manifest.json',
+    './images/icon-192.png',
+    './images/icon-512.png',
     // Módulos de JS
-    '/js/api.js',
-    '/js/dom.js',
-    '/js/events.js',
-    '/js/render.js',
-    '/js/state.js',
-    '/js/utils.js',
+    './js/api.js',
+    './js/dom.js',
+    './js/events.js',
+    './js/render.js',
+    './js/state.js',
+    './js/utils.js',
     // Librerías locales
-    '/libs/bootstrap/bootstrap.min.css',
-    '/libs/bootstrap-icons/bootstrap-icons.min.css',
-    '/libs/bootstrap-icons/fonts/bootstrap-icons.woff',
-    '/libs/bootstrap-icons/fonts/bootstrap-icons.woff2',
-    '/libs/bootstrap/bootstrap.bundle.min.js',
-    '/libs/jspdf/jspdf.umd.min.js',
-    '/libs/html2canvas/html2canvas.min.js'
+    './libs/bootstrap/bootstrap.min.css',
+    './libs/bootstrap-icons/bootstrap-icons.min.css',
+    './libs/bootstrap-icons/fonts/bootstrap-icons.woff',
+    './libs/bootstrap-icons/fonts/bootstrap-icons.woff2',
+    './libs/bootstrap/bootstrap.bundle.min.js',
+    './libs/jspdf/jspdf.umd.min.js',
+    './libs/html2canvas/html2canvas.min.js'
 ];
 
 self.addEventListener('install', event => {
