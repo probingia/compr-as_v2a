@@ -21,17 +21,15 @@ html.font-size-xlarge body {
 
 .icon-microfono {
     color: #dc3545; /* Rojo Bootstrap 'danger' */
-    transition: color 0.3s ease;
 }
 
-/* Animación de parpadeo para el micrófono */
 @keyframes blink {
     0% { opacity: 1; }
     50% { opacity: 0.3; }
     100% { opacity: 1; }
 }
 
-.icon-microfono.blinking {
+.blinking {
     animation: blink 1.2s infinite;
 }
 

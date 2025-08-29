@@ -21,88 +21,94 @@
         </div>
     </div>
 
-    <div class="container py-4">
+    <main class="container py-4">
         <header class="text-center mb-4">
             <h1 class="display-4"><i class="bi bi-cart-check-fill icon-titulo"></i> Compr-As</h1>
             <p class="lead">Tu lista de compras inteligente</p>
         </header>
 
         <!-- Formulario para Añadir Productos -->
-        <div class="card mb-4">
-            <div class="card-body">
+        <section class="card mb-4">
+            <form class="card-body">
                 <h5 class="card-title">Añadir Producto</h5>
                 
-                <!-- Fila 1: Producto y Categoría -->
-                <div class="row g-3 mb-3">
-                    <div class="col-md-6">
-                        <label for="nombre-producto" class="form-label">Producto</label>
-                        <div class="input-group">
-                            <input type="text" id="nombre-producto" class="form-control" placeholder="Nombre" list="sugerencias-productos">
-                            <datalist id="sugerencias-productos"></datalist>
-                            <button class="btn btn-outline-secondary" type="button" id="btn-voz"><i class="bi bi-mic-fill icon-microfono"></i></button>
+                <div class="row g-2">
+                    <!-- Columna Izquierda -->
+                    <div class="col-md-7">
+                        <div class="mb-2">
+                            <label for="nombre-producto" class="form-label">Producto</label>
+                            <div class="input-group">
+                                <input type="text" id="nombre-producto" class="form-control" placeholder="Nombre" list="sugerencias-productos">
+                                <datalist id="sugerencias-productos"></datalist>
+                                <button class="btn btn-outline-secondary" type="button" id="btn-voz"><i class="bi bi-mic-fill icon-microfono"></i></button>
+                            </div>
+                        </div>
+
+                        <div class="row g-2">
+                            <div class="col-sm-6 mb-2">
+                                <label for="cantidad-producto" class="form-label">Cantidad</label>
+                                <div class="input-group">
+                                    <input type="number" id="cantidad-producto" class="form-control" placeholder="1" min="1">
+                                    <select id="unidad-producto" class="form-select flex-grow-0" style="width: 70px;">
+                                        <option value="ud">Ud</option>
+                                        <option value="kg">kg</option>
+                                        <option value="g">g</option>
+                                        <option value="l">l</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 mb-2">
+                                <label for="precio-producto" class="form-label">Precio</label>
+                                <div class="input-group">
+                                    <input type="number" id="precio-producto" class="form-control" placeholder="0.00" min="0" step="1">
+                                    <span class="input-group-text" id="precio-unidad-label">€/ud</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-md-6">
-                        <label for="categoria-producto" class="form-label">Categoría</label>
-                        <select id="categoria-producto" class="form-select" aria-label="Categoría">
-                            <option selected disabled value="">Seleccionar categoría...</option>
-                        </select>
-                    </div>
-                </div>
 
-                <!-- Fila 2: Cantidad y Precio -->
-                <div class="row g-3 mb-3">
-                    <div class="col-md-6">
-                        <label for="cantidad-producto" class="form-label">Cantidad</label>
-                        <div class="input-group">
-                            <input type="number" id="cantidad-producto" class="form-control" placeholder="1" min="1">
-                            <select id="unidad-producto" class="form-select">
-                                <option value="ud">Ud</option>
-                                <option value="kg">kg</option>
-                                <option value="g">g</option>
-                                <option value="l">l</option>
+                    <!-- Columna Derecha -->
+                    <div class="col-md-5">
+                        <div class="mb-2">
+                            <label for="categoria-producto" class="form-label">Categoría</label>
+                            <select id="categoria-producto" class="form-select" aria-label="Categoría">
+                                <option selected disabled value="">Seleccionar categoría...</option>
                             </select>
                         </div>
-                    </div>
-                    <div class="col-md-6">
-                        <label for="precio-producto" class="form-label">Precio Unitario</label>
-                        <div class="input-group">
-                            <input type="number" id="precio-producto" class="form-control" placeholder="0.00" min="0" step="0.01">
-                            <span class="input-group-text" id="precio-unidad-label">€ / ud</span>
+                        <div class="row g-2">
+                            <div class="col-sm-6 mb-2">
+                                <label for="prioridad-producto" class="form-label">Prioridad</label>
+                                <select id="prioridad-producto" class="form-select" aria-label="Prioridad">
+                                    <option value="baja" selected>Baja</option>
+                                    <option value="media">Media</option>
+                                    <option value="alta">Alta</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-6 mb-2">
+                                <label for="tienda-producto" class="form-label">Tienda</label>
+                                <select id="tienda-producto" class="form-select" aria-label="Tienda">
+                                    <option selected disabled value="">Elige</option>
+                                </select>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Fila 3: Prioridad y Tienda -->
-                <div class="row g-3 mb-3">
-                    <div class="col-md-6">
-                        <label for="prioridad-producto" class="form-label">Prioridad</label>
-                        <select id="prioridad-producto" class="form-select" aria-label="Prioridad">
-                            <option value="baja" selected>Baja</option>
-                            <option value="media">Media</option>
-                            <option value="alta">Alta</option>
-                        </select>
+                <!-- Fila de Notas y Botón -->
+                <div class="row g-2 align-items-end">
+                    <div class="col-md-7">
+                        <label for="notas-producto" class="form-label">Notas</label>
+                        <textarea id="notas-producto" class="form-control" rows="1" placeholder="Detalles, marca, ofertas..."></textarea>
                     </div>
-                    <div class="col-md-6">
-                        <label for="tienda-producto" class="form-label">Tienda</label>
-                        <select id="tienda-producto" class="form-select" aria-label="Tienda">
-                            <option selected disabled value="">Elige</option>
-                        </select>
+                    <div class="col-md-5">
+                        <button id="btn-anadir" class="btn btn-primary w-100">Añadir a la lista</button>
                     </div>
                 </div>
-
-                <!-- Fila 4: Notas -->
-                <div class="mb-3">
-                    <label for="notas-producto" class="form-label">Notas</label>
-                    <textarea id="notas-producto" class="form-control" rows="2" placeholder="Detalles, marca, ofertas..."></textarea>
-                </div>
-
-                <button id="btn-anadir" class="btn btn-primary w-100">Añadir a la lista</button>
-            </div>
-        </div>
+            </form>
+        </section>
 
         <!-- Controles y Búsqueda -->
-        <div class="card mb-4">
+        <section class="card mb-4">
             <div class="card-body">
                 <div class="row g-2">
                     <!-- Columna de Búsqueda (Izquierda-Arriba en móvil) -->
@@ -139,44 +145,56 @@
                     <!-- Columna de Botones (Derecha-Abajo en móvil) -->
                     <div class="col-5 col-lg-auto order-4 ms-lg-auto">
                         <div class="btn-group w-100" role="group" id="contenedor-botones-principal">
-                            <!-- Botón Borrar Comprados -->
-                            <button id="btn-borrar-comprados" class="btn btn-outline-secondary" title="Borrar productos comprados"><i class="bi bi-trash"></i></button>
-
-                            <!-- Botón Ordenar -->
-                            <button id="btn-ordenar" class="btn btn-outline-secondary" title="Ordenar"><i class="bi bi-sort-alpha-down"></i></button>
-                            
-                            <!-- Botón Importar/Exportar (abre modal) -->
-                            <button class="btn btn-outline-secondary" type="button" data-bs-toggle="modal" data-bs-target="#exportImportModal" title="Exportar/Importar">
-                                <i class="bi bi-box-arrow-up"></i>
+                            <!-- Botón 1: Borrar Vista Actual -->
+                            <button type="button" class="btn btn-outline-secondary" id="btn-borrar-vista" title="Borrar productos de la vista actual">
+                                <i class="bi bi-trash"></i>
                             </button>
 
-                            <!-- Botón Gestionar -->
-                            <button class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#gestionModal" title="Gestionar"><i class="bi bi-gear-fill"></i></button>
+                            <!-- Botón 2: Ordenar -->
+                            <button id="btn-ordenar" class="btn btn-outline-secondary" title="Ordenar">
+                                <i class="bi bi-sort-alpha-down"></i>
+                            </button>
+                            
+                            <!-- Botón 3: Más Opciones (con Dropdown) -->
+                            <div class="btn-group" role="group">
+                                <button id="btn-mas-opciones" type="button" class="btn btn-outline-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" title="Más opciones">
+                                    <i class="bi bi-gear-fill"></i>
+                                </button>
+                                <ul class="dropdown-menu dropdown-menu-end">
+                                    <li><a class="dropdown-item" href="#" id="menu-ocultar-comprados">Ocultar/Mostrar comprados</a></li>
+                                    <li><a class="dropdown-item" href="#" id="menu-borrar-comprados">Borrar comprados</a></li>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li><a class="dropdown-item" href="#" id="menu-import-export">Importar / Exportar...</a></li>
+                                    <li><a class="dropdown-item" href="#" id="menu-gestionar">Gestionar...</a></li>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li><a class="dropdown-item text-danger" href="#" id="menu-borrar-todo">Borrar TODA la lista</a></li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
 
         <!-- Barra de Filtros Activos -->
-        <div id="active-filters-bar" class="d-flex align-items-center alert alert-light py-2 px-3 mb-4 d-none">
+        <section id="active-filters-bar" class="d-flex align-items-center alert alert-light py-2 px-3 mb-4 d-none">
             <span class="text-muted small">Mostrando resultados filtrados.</span>
             <button id="btn-limpiar-filtros" class="btn btn-sm btn-secondary ms-3">Limpiar filtros</button>
-        </div>
+        </section>
 
         <!-- Lista de Compras -->
-        <div id="lista-compras" class="mb-4" aria-live="polite">
+        <section id="lista-compras" class="mb-4" aria-live="polite">
             <!-- Los productos se insertarán aquí dinámicamente -->
-        </div>
+        </section>
 
         <!-- Total -->
-        <div class="d-flex justify-content-end">
+        <section class="d-flex justify-content-end">
             <div class="p-3 mt-4 border border-primary rounded">
                 <p class="fs-5 mb-1 text-end">Total de productos: <span id="total-productos" class="fw-bold">0</span></p>
                 <p class="fs-5 mb-0 text-end">Coste total: <span id="coste-total" class="fw-bold">0.00</span> €</p>
             </div>
-        </div>
-    </div>
+        </section>
+    </main>
 
     <!-- ------------- MODALES ------------- -->
 
@@ -215,15 +233,9 @@
                             </div>
                             <hr>
                             <h6>Ajustes de Visualización</h6>
-                            <div class="mb-3">
+                            <div>
                                 <label for="rangoTamanoLetra" class="form-label">Tamaño del Texto</label>
                                 <input type="range" class="form-range" min="12" max="24" id="rangoTamanoLetra">
-                            </div>
-                            <hr>
-                            <h6>Gestión de la Lista</h6>
-                            <div class="d-grid gap-2">
-                                <button class="btn btn-outline-secondary" type="button" id="btn-ocultar-comprados-gestion">Ocultar/Mostrar comprados</button>
-                                <button class="btn btn-outline-danger" type="button" id="btn-borrar-todo-gestion">Borrar toda la lista</button>
                             </div>
                         </div>
                         <!-- Panel de Autocompletado -->
