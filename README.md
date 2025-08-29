@@ -1,98 +1,76 @@
-# Compr-As: Tu Asistente de Compras Inteligente
+# Compr-As: Tu Lista de Compras Inteligente
 
-![Compr-As Logo](assets/icons/icon-512x512.png) <!-- Asumiendo que existe un logo en esta ruta -->
+**Compr-As** es una PWA (Progressive Web App) moderna y completa para gestionar tus listas de la compra de forma fácil, rápida y con funciones avanzadas. Olvídate del papel y lleva tus compras al siguiente nivel.
 
-## Descripción del Proyecto
+![Captura de pantalla de Compr-As](images/screenshot.png) 
 
-**Compr-As** es una aplicación de lista de compras robusta y flexible, diseñada para ofrecer una experiencia de usuario intuitiva y eficiente. Desarrollada con tecnologías web (HTML, CSS, JavaScript), funciona como una Progressive Web App (PWA) completa, permitiendo su instalación y uso offline. La aplicación se enfoca en la gestión inteligente de productos, categorías y tiendas, con funcionalidades avanzadas de importación/exportación y una interfaz de usuario altamente interactiva.
+## ✨ Características Principales
 
-## Características Principales
+*   **🛒 Gestión Completa:** Añade, edita, elimina y marca productos como comprados con un solo clic.
+*   **🗂️ Organización Total:** Organiza tus productos por categorías y tiendas personalizables.
+*   **🎙️ Entrada por Voz:** Añade productos rápidamente usando tu voz.
+*   **🧠 Autocompletado Inteligente:** El sistema aprende de los productos que añades para sugerírtelos en el futuro.
+*   **🔍 Búsqueda y Filtrado:** Encuentra cualquier producto al instante y filtra tu lista por tienda o prioridad.
+*   **⇅ Orden Dinámico:** Ordena tu lista por nombre, categoría o coste para visualizarla como prefieras.
+*   **🔄 Importa y Exporta:**
+    *   Exporta tu lista de compras a formatos `.txt`, `.jpg` o `.pdf`.
+    *   Importa listas desde archivos `.txt`, con un sistema de previsualización para asegurar que los datos son correctos.
+*   **📱 Diseño Adaptable (Responsive):** Interfaz clara y fácil de usar en cualquier dispositivo, ya sea móvil, tablet o escritorio.
+*   **🌐 Funcionalidad Offline:** Gracias a que es una PWA, puedes usar la aplicación incluso sin conexión a internet.
+*   **⚙️ Personalización:** Ajusta el tamaño del texto para una mejor accesibilidad.
 
-*   **PWA Completa:** Instalable y con capacidad offline gracias a un Service Worker dedicado.
-*   **Gestión de Productos:** Añade, edita y elimina productos con detalles como notas y prioridad.
-*   **Importación/Exportación Selectiva:** Control total sobre los datos importados y exportados, con previsualización de productos individuales.
-*   **Exportación a Múltiples Formatos:** Exporta listas a `.txt`, `.jpg` y `.pdf` con diseños personalizables.
-*   **Importación Robusta desde TXT:** Analiza archivos `.txt` inteligentemente, previsualiza resultados y maneja información detallada de productos, ignorando líneas irrelevantes.
-*   **Ordenación Avanzada y Dinámica:** Ordena listas por Categoría, Nombre, Prioridad y Coste (ascendente/descendente), con tooltips dinámicos.
-*   **Gestión Dinámica de Categorías y Tiendas:** Añade y elimina categorías y tiendas en tiempo de ejecución.
-*   **Experiencia de Usuario (UX) Mejorada:**
-    *   Autocompletado inteligente y reconocimiento de voz para añadir productos.
-    *   Filtrado por tienda y búsqueda de texto libre.
-    *   Ajuste dinámico del tamaño de fuente para accesibilidad.
-    *   Panel de totales destacado para mayor claridad.
+## 🚀 Cómo Empezar
 
-## Arquitectura del Proyecto
+Este proyecto utiliza **Vite** para un desarrollo rápido y moderno.
 
-El proyecto sigue una arquitectura modular clara, con responsabilidades bien definidas en el directorio `js/`:
-
-*   `state.js`: Centraliza el estado de la aplicación.
-*   `dom.js`: Abstrae las referencias a elementos del DOM.
-*   `api.js`: Gestiona la persistencia en `localStorage` y la carga de datos iniciales.
-*   `render.js`: Controla toda la renderización y actualización de la UI.
-*   `events.js`: Orquesta todos los eventos y la lógica de interacción del usuario.
-*   `utils.js`: Contiene funciones de utilidad compartidas.
-
-## Instalación y Ejecución
-
-Para instalar y ejecutar Compr-As, sigue los siguientes pasos:
-
-1.  **Clonar el Repositorio:**
+1.  **Clona el repositorio:**
     ```bash
-    git clone <URL_DEL_REPOSITORIO>
-    cd Compr-As
+    git clone https://github.com/tu-usuario/compr-as.git
+    cd compr-as
     ```
 
-2.  **Abrir con un Servidor Local:**
-    Dado que es una aplicación web estática, puedes abrir `index.html` directamente en tu navegador o, para una mejor experiencia (especialmente con Service Workers y PWA), se recomienda usar un servidor web local. Puedes usar `http-server` de Node.js:
-
+2.  **Instala las dependencias:**
     ```bash
-    # Si no lo tienes instalado globalmente
-    npm install -g http-server
-
-    # Desde la raíz del proyecto
-    http-server .
-    ```
-    Luego, abre tu navegador y navega a `http://localhost:8080` (o el puerto que `http-server` indique).
-
-3.  **Para Desarrollo (Electron/Cordova/Capacitor):**
-    Si este proyecto está configurado para Electron, Cordova o Capacitor, necesitarás seguir los pasos específicos de configuración para cada plataforma. Por lo general, esto implica:
-
-    ```bash
-    # Para Electron (si aplica)
     npm install
-    npm start
-
-    # Para Cordova/Capacitor (si aplica)
-    npm install
-    npx cap add android # o ios
-    npx cap open android # o ios
     ```
-    *Nota: Asegúrate de tener Node.js y npm instalados en tu sistema.*
 
-## Uso
+3.  **Inicia el servidor de desarrollo:**
+    ```bash
+    npm run dev
+    ```
+    ¡Y listo! La aplicación estará disponible en `http://localhost:5173` (o el puerto que indique Vite).
 
-Una vez que la aplicación esté en funcionamiento, puedes:
+## 🛠️ Scripts Disponibles
 
-*   Añadir nuevos productos a tu lista de compras.
-*   Organizar productos por categorías y tiendas.
-*   Marcar productos como comprados.
-*   Importar y exportar tus listas para compartirlas o hacer copias de seguridad.
-*   Utilizar las opciones de ordenación y filtrado para gestionar tus compras de manera eficiente.
+*   `npm run dev`: Inicia el servidor de desarrollo con Vite.
+*   `npm run build`: Compila y optimiza la aplicación para producción.
+*   `npm run test`: Ejecuta los tests unitarios con Vitest.
 
-## Mejoras Futuras (Deuda Técnica Menor)
+## 🏗️ Estructura del Proyecto
 
-Aunque la aplicación es muy completa, se han identificado las siguientes áreas para futuras mejoras:
+```
+/
+├── public/
+│   ├── images/       # Iconos y assets de la PWA
+│   └── ...
+├── src/
+│   ├── js/           # Módulos de JavaScript (lógica de la app)
+│   │   ├── api.js
+│   │   ├── dom.js
+│   │   ├── events.js
+│   │   ├── render.js
+│   │   ├── state.js
+│   │   └── utils.js
+│   ├── libs/         # Librerías de terceros (Bootstrap, jsPDF)
+│   ├── app.js        # Punto de entrada principal de JS
+│   ├── index.html    # Estructura principal de la aplicación
+│   ├── style.css     # Estilos personalizados
+│   └── ...
+├── .gitignore
+├── package.json
+└── README.md
+```
 
-1.  **Notificaciones y Feedback al Usuario:** Reemplazar `alert()` por notificaciones más modernas (toasts/snackbars).
-2.  **Confirmaciones de Usuario:** Añadir diálogos de confirmación para eliminar categorías o tiendas.
-3.  **Guía de Formato de Importación:** Incluir un ícono de ayuda con instrucciones claras y ejemplos para el formato `.txt` de importación.
-4.  **Accesibilidad (A11y):** Realizar una auditoría exhaustiva para asegurar el uso correcto de atributos ARIA, contraste de colores y navegación por teclado.
-5.  **Refinamiento de UI/UX:** Pulir detalles como animaciones sutiles y unificar el estilo de los modales.
+## 🤝 Contribuciones
 
-## Licencia
-
-Este proyecto está bajo la licencia [MIT](LICENSE). <!-- O la licencia que corresponda -->
-
----
-
-**Compr-As** - Simplificando tus compras.
+Las contribuciones son bienvenidas. Si tienes ideas para mejorar la aplicación, por favor abre un *issue* para discutirlo o envía un *pull request*.
